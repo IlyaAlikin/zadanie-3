@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "Карта: геолокация",
+    "slug": "zadanie-3-geo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Приложению нужен доступ к галерее, чтобы прикреплять изображения к меткам на карте."
+        }
+      ],
+      "expo-sqlite",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Приложение показывает ваше местоположение на карте и уведомляет о приближении к сохранённым меткам."
+        }
+      ],
+      [
+        "expo-notifications",
+        {}
+      ]
+    ],
+    "scheme": "zadanie3geo",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
